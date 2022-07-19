@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+ 
+ 
+    Valor 1: <input type="text" id="in1"><br>
+    Valor 2: <input type="text" id="in2"><br>
+    <br>
+    Resultat: <h2 id="out"></h2>
+    <br>
+    <button onClick="suma()">Suma</button>
+ 
+    <br>
+    <br>
+    DNI: <input type="text" id="dni"><br>
+    <button onClick="validarDNI()">Validar</button>
+    <h3 id="resultadoValidacion"></h3>
+ 
+ 
+ 
+ 
+    <script>
+ 
+let inputDNI = document.getElementById("dni");
+let resultadoValidacion = document.getElementById("resultadoValidacion");
+ 
+        let valor1 = document.getElementById("in1");
+        let valor2 = document.getElementById("in2");
+        let output = document.getElementById("out");
+ 
+        function suma() {
+            let resultado = valor1.value * 1 + valor2.value * 1;
+            output.innerText = resultado;
+            console.log(resultado)
+        }
+ 
+        function validarDNI(){
+            let valordni = inputDNI.value * 1;
+            let mensaje = "";
+            if (valordni % 2 == 0){
+                //DNI%23 et dona la posicio
+                mensaje="DNI válido";
+            } else {
+                mensaje = "DNI NO válido";
+            }
+            resultadoValidacion.innerText=mensaje;
+        }
+ 
+ 
+ 
+    </script>
+</body>
+ 
+</html>
