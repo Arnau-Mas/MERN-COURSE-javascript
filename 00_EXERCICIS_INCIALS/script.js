@@ -1,4 +1,4 @@
-/* //Asignaciones y cálculos
+//Asignaciones y cálculos
 
 function numeros(a,b){
     console.log(`El primer número es ${a} y el segundo número es ${b}`)
@@ -177,18 +177,7 @@ function pedirSegundos(){
   productoFactorial();
   pedirPassword();
   pedirSegundos();
-  */
 
-  function sumaDePares(num){
-    let numero = num;
-    let suma = 0;
-    if(numero%2==0){
-      suma+=numero;
-      numero--;
-    }else{
-      numero--;
-    }
-  }
 
 
 
