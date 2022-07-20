@@ -40,9 +40,14 @@
         let number2;
         let operator;
         let textVisual = 0; 
+        let givenResult = false;
         let resultHtml = document.querySelector("#result");
 
         function getNumber(number){
+            if(givenResult===true){
+                clearAll();
+                givenResult = false;
+            }
             if(number1){
                 number1+=number;
             }else{
@@ -53,6 +58,10 @@
             }else{
                 textVisual+=number;
             }
+            console.log("number", number);
+            console.log("number 1", number1);
+            console.log("number 2", number2);
+            console.log("textVisual", textVisual)
             resultHtml.textContent = textVisual;
         }
 
@@ -83,16 +92,17 @@
             }
             //DECLARAR LA VARIABLE RESULT 
             switch(operator){
-                case "+": result = number2+number1;
+                case "+": result = Number(number2)+Number(number1);
                 break;
                 case "-": result = number2-number1;
                 break;
                 case "*": result = number2*number1;
                 break;
-                case "/": result = number2/number1;
+                case "/": number1 == 0 ? result = 0 : result = number2/number1;
                 break;
             }   
             resultHtml.textContent = result;
+            givenResult = true;
         }
         
         function clearAll(){
@@ -101,7 +111,6 @@
             number1 = undefined;
             number2 = undefined;
             operator = undefined;
-
         }
     </script>
 </body>
