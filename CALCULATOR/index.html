@@ -11,7 +11,7 @@
     <div class="container">
         <h1><span>CAL</span>CULATOR</h1>
         <div class="calculator">
-                <p>0</p>
+                <p id="result">0</p>
                 <div class="buttonPanel">
                 <button onclick="getNumber('7')">7</button>
                 <button onclick="getNumber('8')">8</button>
@@ -30,8 +30,8 @@
                 <br>
                 <button onclick="getNumber('0')">0</button>
                 <button onclick="operacion('/')">/</button>
-                <button class="buttonC">C</button>
-                <button class="buttonResult">=</button>
+                <button class="buttonC" onclick="clearAll()">C</button>
+                <button class="buttonResult" onclick="getResult()">=</button>
                 </div>
         </div>
     </div>
@@ -39,6 +39,8 @@
         let number1;
         let number2;
         let operator;
+        let textVisual = 0; 
+        let resultHtml = document.querySelector("#result");
 
         function getNumber(number){
             if(number1){
@@ -46,24 +48,61 @@
             }else{
                 number1 = number;
             }
-            console.log(number1)
+            if(textVisual == 0){
+                textVisual = number1;
+            }else{
+                textVisual+=number1;
+            }
+            resultHtml.textContent = textVisual;
         }
 
-        function operacion(operator){
+        function operacion(operatorIn){
             number2 = number1; 
             number1 = undefined;
-            switch(operator){
+            let result = 0;
+            switch(operatorIn){
                 case "+": operator = "+";
                 break;
-                case "-":
-                    operator = "+";
+                case "-": operator = "-";
                 break;
                 case "*": operator = "*";
                 break;
-                case "/": opeartor = "/";
+                case "/": operator = "/";
+                break;
+            }
+            if(textVisual[textVisual.length-1]!="+" && textVisual[textVisual.length-1]!="-" && textVisual[textVisual.length-1]!="*" &&textVisual[textVisual.length-1]!="/"){
+                operator = operatorIn;
+                textVisual+=operator;
+                resultHtml.textContent = textVisual;
             }
         }
 
+        function getResult(){
+            if(!number1){
+                number1 = number2;
+            }
+            //DECLARAR LA VARIABLE RESULT 
+            switch(operator){
+                case "+": result = number2+number1;
+                break;
+                case "-": result = number2-number1;
+                break;
+                case "*": result = number2*number1;
+                break;
+                case "/": result = number2/number1;
+                break;
+            }   
+            resultHtml.textContent = result;
+        }
+        
+        function clearAll(){
+            resultHtml.textContent = "0";
+            textVisual = 0;
+            number1 = undefined;
+            number2 = undefined;
+            operator = undefined;
+
+        }
     </script>
 </body>
 </html>
