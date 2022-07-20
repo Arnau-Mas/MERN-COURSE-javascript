@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #6EC9FE;
+}
+
+span{
+    color: #99F9B1;
+}
+
+p{
+    font-size: 3rem;
+    background-color: #414141;
+    color: #6CDEF0;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 85%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-top: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px black;
+    color:#6192cd;
+}
+
+button{
+    font-size: 1.9rem;
+    margin: 0.3rem;
+    height: 4rem;
+    width: 5rem;
+    background-color: #EFEFEF;
+    border: 0;
+    border-radius: 1rem;
+    color: #6d6d6d;
+    cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    background-color: #AAAAAA;
+    margin-top: 2rem;
+    width: 400px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonPanel{
+    padding-bottom: 1rem;
+}
+
+.buttonC{
+    background-color: #99F9B1;
+}
+
+.buttonResult{
+    background-color: #FEFB88;
+}
