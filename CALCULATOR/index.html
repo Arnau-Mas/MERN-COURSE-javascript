@@ -11,29 +11,59 @@
     <div class="container">
         <h1><span>CAL</span>CULATOR</h1>
         <div class="calculator">
-                <p>2423</p>
+                <p>0</p>
                 <div class="buttonPanel">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>+</button>
+                <button onclick="getNumber('7')">7</button>
+                <button onclick="getNumber('8')">8</button>
+                <button onclick="getNumber('9')">9</button>
+                <button onclick="operacion('+')">+</button>
                 <br>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
+                <button onclick="getNumber('4')">4</button>
+                <button onclick="getNumber('5')">5</button>
+                <button onclick="getNumber('6')">6</button>
+                <button onclick="operacion('-')">-</button>
                 <br>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>*</button>
+                <button onclick="getNumber('1')">1</button>
+                <button onclick="getNumber('2')">2</button>
+                <button onclick="getNumber('3')">3</button>
+                <button onclick="operacion('*')">*</button>
                 <br>
-                <button>0</button>
-                <button>/</button>
+                <button onclick="getNumber('0')">0</button>
+                <button onclick="operacion('/')">/</button>
                 <button class="buttonC">C</button>
                 <button class="buttonResult">=</button>
                 </div>
         </div>
     </div>
+    <script>
+        let number1;
+        let number2;
+        let operator;
+
+        function getNumber(number){
+            if(number1){
+                number1+=number;
+            }else{
+                number1 = number;
+            }
+            console.log(number1)
+        }
+
+        function operacion(operator){
+            number2 = number1; 
+            number1 = undefined;
+            switch(operator){
+                case "+": operator = "+";
+                break;
+                case "-":
+                    operator = "+";
+                break;
+                case "*": operator = "*";
+                break;
+                case "/": opeartor = "/";
+            }
+        }
+
+    </script>
 </body>
 </html>
