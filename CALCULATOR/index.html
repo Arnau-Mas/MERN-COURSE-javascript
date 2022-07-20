@@ -16,22 +16,22 @@
                 <button onclick="getNumber('7')">7</button>
                 <button onclick="getNumber('8')">8</button>
                 <button onclick="getNumber('9')">9</button>
-                <button onclick="operacion('+')">+</button>
+                <button class="buttonOperator" onclick="operacion('+')">+</button>
                 <br>
                 <button onclick="getNumber('4')">4</button>
                 <button onclick="getNumber('5')">5</button>
                 <button onclick="getNumber('6')">6</button>
-                <button onclick="operacion('-')">-</button>
+                <button class="buttonOperator" onclick="operacion('-')">-</button>
                 <br>
                 <button onclick="getNumber('1')">1</button>
                 <button onclick="getNumber('2')">2</button>
                 <button onclick="getNumber('3')">3</button>
-                <button onclick="operacion('*')">*</button>
+                <button class="buttonOperator" onclick="operacion('*')">*</button>
                 <br>
                 <button onclick="getNumber('0')">0</button>
-                <button onclick="operacion('/')">/</button>
+                <button class="buttonOperator" onclick="operacion('/')">/</button>
                 <button class="buttonC" onclick="clearAll()">C</button>
-                <button class="buttonResult" onclick="getResult()">=</button>
+                <button class="buttonOperator" onclick="getResult()">=</button>
                 </div>
         </div>
     </div>
@@ -51,7 +51,7 @@
             if(textVisual == 0){
                 textVisual = number1;
             }else{
-                textVisual+=number1;
+                textVisual+=number;
             }
             resultHtml.textContent = textVisual;
         }

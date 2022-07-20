@@ -4,17 +4,18 @@
 }
 
 body{
-    background-color: #6EC9FE;
+    background-color: #ffffff;
+    background: url("https://img.freepik.com/free-photo/orange-watercolor-brush-stroke-background_1017-24500.jpg?w=2000") no-repeat center center fixed;
 }
 
 span{
-    color: #99F9B1;
+    color: #393939;
 }
 
 p{
     font-size: 3rem;
     background-color: #414141;
-    color: #6CDEF0;
+    color: #ffffff;
     margin: 1rem;
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     border-radius: 1rem;
@@ -28,7 +29,7 @@ h1{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 3rem;
     text-shadow: 1px 1px 2px black;
-    color:#6192cd;
+    color:#ffffffd8;
 }
 
 button{
@@ -36,10 +37,10 @@ button{
     margin: 0.3rem;
     height: 4rem;
     width: 5rem;
-    background-color: #EFEFEF;
+    background-color: #4D4D4D;
     border: 0;
     border-radius: 1rem;
-    color: #6d6d6d;
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -52,7 +53,7 @@ button{
 }
 
 .calculator{
-    background-color: #AAAAAA;
+    background-color: #1A1A1A;
     margin-top: 2rem;
     width: 400px;
     border-radius: 1rem;
@@ -66,9 +67,9 @@ button{
 }
 
 .buttonC{
-    background-color: #99F9B1;
+    background-color: #F7931F;
 }
 
-.buttonResult{
-    background-color: #FEFB88;
+.buttonOperator{
+    background-color: #F7931F;
 }
