@@ -6,33 +6,34 @@ class Figura {
 }
 
 class Rectangle extends Figura{
-    constructor(lado1, lado2){
-        super(lado1, lado2);
+    constructor(x, y, lado1, lado2){
+        super(x, y);
+        this.lado1 = lado1;
+        this.lado2 = lado2;
     }
     area(){
-        return this.x*this.y;
+        return this.lado1*this.lado2;
     }
 }
 
 class Triangle extends Figura{
-    constructor(base,altura){
-        super(base,altura);
+    constructor(x, y, base,altura){
+        super(x,y);
+        this.base = base;
+        this.altura = altura;
     }
     area(){
-        return this.x*this.y/2
+        return this.base*this.altura/2;
     }
 }
 
-class Quadrat extends Triangle{
-    constructor(lado){
-        super(lado, lado)
-    }
-    area(){
-        return this.x*this.y;
+class Quadrat extends Rectangle{
+    constructor(x,y, lado){
+        super(x,y, lado, lado);
     }
 }
 
-let figura1 = new Figura(2,4);
-let rectangle1 = new Rectangle(3,5);
-let triangle1 = new Triangle(4,5);
-let quadrat1 = new Quadrat(6);
+let figura1 = new Figura(1,1,2,4);
+let rectangle1 = new Rectangle(1,1,3,5);
+let triangle1 = new Triangle(1,1,4,5);
+let quadrat1 = new Quadrat(1,1,6);
