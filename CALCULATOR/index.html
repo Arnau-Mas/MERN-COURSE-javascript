@@ -36,6 +36,7 @@
         </div>
     </div>
     <script>
+        let arrayNumbers = [];
         let number1;
         let number2;
         let operator;
@@ -59,14 +60,11 @@
             }else{
                 textVisual+=number;
             }
-            console.log("number", number);
-            console.log("number 1", number1);
-            console.log("number 2", number2);
-            console.log("textVisual", textVisual)
             resultHtml.textContent = textVisual;
         }
 
         function operacion(operatorIn){
+            arrayNumbers.push(number1);
             number2 = number1; 
             number1 = undefined;
             result = 0;
@@ -82,6 +80,7 @@
             }
             if(textVisual[textVisual.length-1]!="+" && textVisual[textVisual.length-1]!="-" && textVisual[textVisual.length-1]!="*" &&textVisual[textVisual.length-1]!="/"){
                 operator = operatorIn;
+                arrayNumbers.push(operator);
                 textVisual+=operator;
                 resultHtml.textContent = textVisual;
             }
@@ -108,6 +107,7 @@
         function clearAll(){
             resultHtml.textContent = "0";
             textVisual = 0;
+            arrayNumbers = [];
             number1 = undefined;
             number2 = undefined;
             operator = undefined;
