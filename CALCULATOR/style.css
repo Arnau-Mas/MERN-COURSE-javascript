@@ -44,8 +44,12 @@ button{
     border-radius: 1rem;
     color: #ffffff;
     cursor: pointer;
+    transition: background-color .1s linear;
 }
 
+button:hover{
+    background-color: #acacac22;
+}
 
 .container {
     display: flex;
@@ -75,6 +79,14 @@ button{
 
 .buttonOperator{
     background-color: #F7931F;
+}
+
+.buttonOperator:hover{
+    background-color: #f7921f59;
+}
+
+.buttonC:hover{
+    background-color: #f7921f59;
 }
 
 
