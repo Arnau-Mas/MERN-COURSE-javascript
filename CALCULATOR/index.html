@@ -61,6 +61,7 @@
                 textVisual+=number;
             }
             resultHtml.textContent = textVisual;
+            console.log(arrayNumbers)
         }
 
         function operacion(operatorIn){
@@ -84,6 +85,7 @@
                 textVisual+=operator;
                 resultHtml.textContent = textVisual;
             }
+            console.log(arrayNumbers)
         }
 
         function getResult(){
@@ -91,7 +93,7 @@
                 number1 = number2;
             }
             switch(operator){
-                case "+": result = Number(number2)+Number(number1);
+                case "+": result = Number(number2)+Number(number1); 
                 break;
                 case "-": result = number2-number1;
                 break;
